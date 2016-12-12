@@ -3,8 +3,7 @@ Description=Masakari Api Daemon
 
 [Service]
 Type=simple
-User=openstack
-Group=openstack
+User=masakari
 ExecStart=/usr/bin/masakari-api
 
 [Install]

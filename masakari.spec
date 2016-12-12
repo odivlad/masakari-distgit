@@ -103,6 +103,25 @@ install -p -D -m 644 etc/%{package_name}/* %{buildroot}%{_sysconfdir}/%{package_
 %{_unitdir}/*
 
 
+%post
+getent passwd masakari 2&>1 > /dev/null
+[ $? -ne 0 ] && useradd masakari -s /sbin/nologin
+systemctl daemon-reload
+
+
+%preun
+if [ $1 -eq 0 ]; then # only before removal
+    systemctl stop masakari-api masakari-engine ||:
+fi
+
+
+%postun
+if [ $1 -eq 0 ]; then # only after removal
+    userdel masakari ||:
+    groupdel masakari ||:
+fi
+
+
 %changelog
 * Mon Dec 12 2016 Vladislav Odintsov <odivlad@gmail.com> - 2.0.0-1
 - Initial packaging.
