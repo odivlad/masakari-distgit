@@ -8,7 +8,7 @@
 
 Name:       %{package_name}
 Version:    2.0.0
-Release:    0.test.2%{?dist}
+Release:    0.test.4%{?dist}
 Summary:    Virtual Machine High Availability (VMHA) service for OpenStack.
 
 License:    ASL 2.0
