@@ -26,6 +26,38 @@ BuildRequires:  rdo-rpm-macros
 BuildRequires:  python-oslo-sphinx
 BuildRequires:  python-sphinx
 
+# Python requires
+Requires:   python-eventlet
+Requires:   python-jsonschema
+Requires:   python-migrate
+Requires:   python-paste-deploy
+Requires:   python-pep8
+Requires:   python-requests
+Requires:   python-routes
+Requires:   python-six
+Requires:   python-sqlalchemy
+Requires:   python-stevedore
+Requires:   python-taskflow
+Requires:   python-webob
+
+# Openstack requires
+Requires:   python-keystoneauth1
+Requires:   python-novaclient
+Requires:   python-oslo-concurrency
+Requires:   python-oslo-context
+Requires:   python-oslo-config
+Requires:   python-oslo-db
+Requires:   python-oslo-i18n
+Requires:   python-oslo-log
+Requires:   python-oslo-messaging
+Requires:   python-oslo-middleware
+Requires:   python-oslo-policy
+Requires:   python-oslo-serialization
+Requires:   python-oslo-service
+Requires:   python-oslo-utils
+Requires:   python-oslo-versionedobjects
+
+
 %description
 Masakari provides Virtual Machine High Availability (VMHA) service
 for OpenStack clouds by automatically recovering the KVM-based Virtual
