@@ -15,6 +15,8 @@ License:    ASL 2.0
 URL:        http://docs.openstack.org/developer/masakari
 
 Source0:    https://tarballs.openstack.org/%{package_name}/%{package_name}-%{upstream_version}.tar.gz
+Source1:    masakari-api.service
+Source2:    masakari-engine.service
 
 BuildArch:  noarch
 

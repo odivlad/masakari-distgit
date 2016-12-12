@@ -1,0 +1,11 @@
+[Unit]
+Description=Masakari Api Daemon
+
+[Service]
+Type=simple
+User=openstack
+Group=openstack
+ExecStart=/usr/bin/masakari-api
+
+[Install]
+WantedBy=multi-user.target
