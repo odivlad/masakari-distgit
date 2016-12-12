@@ -58,6 +58,7 @@ Requires:   python-oslo-serialization
 Requires:   python-oslo-service
 Requires:   python-oslo-utils
 Requires:   python-oslo-versionedobjects
+Requires:   python2-microversion-parse
 
 
 %description
