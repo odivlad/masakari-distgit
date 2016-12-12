@@ -99,7 +99,7 @@ install -p -D -m 644 etc/%{package_name}/* %{buildroot}%{_sysconfdir}/%{package_
 %files
 %{_bindir}/*
 %{python2_sitelib}/%{srcname}*
-%{_sysconfdir}/%{package_name}/*
+%config(noreplace) %{_sysconfdir}/%{package_name}/*
 %{_unitdir}/*
 
 
