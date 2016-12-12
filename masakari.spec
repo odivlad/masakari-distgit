@@ -87,10 +87,20 @@ rm -f *requirements.txt
 %py2_install
 %{__python2} setup.py build_sphinx
 
+# Install systemd units in BUILDROOT
+install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}/masakari-api.service
+install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}/masakari-engine.service
+
+# Install configs in _sysconfdir
+mkdir -p %{buildroot}/%{_sysconfdir}/%{package_name}/
+install -p -D -m 644 etc/%{package_name}/* %{buildroot}%{_sysconfdir}/%{package_name}/
+
 
 %files
 %{_bindir}/*
 %{python2_sitelib}/%{srcname}*
+%{_sysconfdir}/%{package_name}/*
+%{_unitdir}/*
 
 
 %changelog
