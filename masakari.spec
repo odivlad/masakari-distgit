@@ -94,7 +94,9 @@ install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}/masakari-engine.service
 
 # Install configs in _sysconfdir
 mkdir -p %{buildroot}/%{_sysconfdir}/%{package_name}/
-install -p -D -m 644 etc/%{package_name}/* %{buildroot}%{_sysconfdir}/%{package_name}/
+install -p -D -m 644 etc/%{package_name}/api-paste.ini %{buildroot}%{_sysconfdir}/%{package_name}/
+install -p -D -m 644 etc/%{package_name}/masakari.conf %{buildroot}%{_sysconfdir}/%{package_name}/
+install -p -D -m 644 etc/%{package_name}/policy.json %{buildroot}%{_sysconfdir}/%{package_name}/
 
 
 %files
